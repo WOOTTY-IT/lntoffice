@@ -40,7 +40,10 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
-src/
+src/assets/**/**
+!src/assets/js/pages/dthosxp-report-custom.js
+src/html/**
+!src/html/hosxp_report.html
 docs/
 # TypeScript v1 declaration files
 typings/
