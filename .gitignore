@@ -44,6 +44,7 @@ src/assets/**/**
 !src/assets/js/pages/dthosxp-report-custom.js
 src/html/**
 !src/html/hosxp_report.html
+!src/html/layouts
 docs/
 # TypeScript v1 declaration files
 typings/
