@@ -2,7 +2,7 @@ $(document).ready(function() {
     setTimeout(function() {
 
                 // [ Javascript source table ]
-/*                var dataSet = [
+                var dataSet = [
                     ["Tiger Nixon", "System Architect", "Edinburgh", "5421", "2011/04/25", "$320,800"],
                     ["Garrett Winters", "Accountant", "Tokyo", "8422", "2011/07/25", "$170,750"],
                     ["Ashton Cox", "Junior Technical Author", "San Francisco", "1562", "2009/01/12", "$86,000"],
@@ -23,7 +23,7 @@ $(document).ready(function() {
                     ["Gloria Little", "Systems Administrator", "New York", "1721", "2009/04/10", "$237,500"],
                     ["Bradley Greer", "Software Engineer", "London", "2558", "2012/10/13", "$132,000"],
                     ["Dai Rios", "Personnel Lead", "Edinburgh", "2290", "2012/09/26", "$217,500"],
-                ];*/
+                ];
                 
                 var table = $('#dthosxp-report').DataTable({
                     // data: dataSet,

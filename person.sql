@@ -535,21 +535,21 @@ INSERT INTO `sex` VALUES ('2', 'หญิง');
 -- ----------------------------
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
-  `pid` int(25) NOT NULL,
-  `cid` varchar(13) COLLATE utf8_unicode_ci NOT NULL COMMENT 'lookup(person)',
-  `full_name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'ชื่อผู้ใช้บันทึก i_person',
-  `user_name` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'user_name',
-  `password` varchar(33) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `user_type` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'ประเภทผู้ใช้งาน  1 admin 2 เจ้าหน้าที่ 3 ผู้ใช้งาน',
-  `lastupdate` date DEFAULT NULL COMMENT 'วันที่สมัคร',
-  PRIMARY KEY (`cid`,`pid`)
+  `cid` varchar(13) COLLATE utf8_unicode_ci NOT NULL,
+  `full_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `username` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `password` varchar(33) COLLATE utf8_unicode_ci NOT NULL,
+  `user_type` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`cid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES ('1', '3320200524765', 'pwan', 'ppp', 'ppp', 'admin', '2021-04-03');
-INSERT INTO `user` VALUES ('2', '3320200524766', 'ประเสริฐ ดีเสมอ', 'p', 'p', 'admin', '2021-04-03');
-INSERT INTO `user` VALUES ('3', '3320200524799', 'pwan jai', 'jai', 'jai', 'admin', '2021-04-01');
-INSERT INTO `user` VALUES ('5', '3333333333333', 'p3333', 'p3', 'p3', 'admin', '2021-04-03');
-INSERT INTO `user` VALUES ('4', '3361200362987', 'พรมมา หงษ์แปลง', 'bhomma', '1234', 'admin', '2021-04-11');
+INSERT INTO `user`(`cid`,`full_name`,`username`,`password`,`user_type`) VALUES ('3320200524765', 'pwan', 'ppp', 'ppp', 'admin');
+INSERT INTO `user`(`cid`,`full_name`,`username`,`password`,`user_type`) VALUES ('3320200524766', 'ประเสริฐ ดีเสมอ', 'p', 'p', 'admin');
+INSERT INTO `user`(`cid`,`full_name`,`username`,`password`,`user_type`) VALUES ('3320200524799', 'pwan jai', 'jai', 'jai', 'admin');
+INSERT INTO `user`(`cid`,`full_name`,`username`,`password`,`user_type`) VALUES ('3333333333333', 'p3333', 'p3', 'p3', 'admin');
+INSERT INTO `user`(`cid`,`full_name`,`username`,`password`,`user_type`) VALUES ('3361200362987', 'พรมมา หงษ์แปลง', 'bhomma', '1234', 'admin');
+
