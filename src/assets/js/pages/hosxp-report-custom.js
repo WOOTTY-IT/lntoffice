@@ -21,6 +21,10 @@ $(document).ready(function() {
       });
     });
 
+    $('#btn-hosxp-report').click(function(){
+        console.log('button clicked!');
+
+
     setTimeout(function() {
 
                 // [ Javascript source table ]
@@ -48,7 +52,7 @@ $(document).ready(function() {
                 ];
                 
                 var table = $('#dthosxp-report').DataTable({
-                    // data: dataSet,
+                    data: dataSet,
                     columns: [{
                             title: "Name"
                         },
@@ -91,4 +95,6 @@ $(document).ready(function() {
         });
 
     }, 350);
+
+    });
 });
