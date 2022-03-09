@@ -1,4 +1,26 @@
 $(document).ready(function() {
+
+    $(function() {
+      $('input[name="startdate"]').daterangepicker({
+        singleDatePicker: true,
+        showDropdowns: false,
+        minYear: 1901,
+        maxYear: parseInt(moment().format('YYYY'),10),
+      }, function(start, end, label) {
+      console.log('start:'+start+' end:'+end+' label:'+label);
+      });
+    });
+    $(function() {
+      $('input[name="enddate"]').daterangepicker({
+        singleDatePicker: true,
+        showDropdowns: false,
+        minYear: 1901,
+        maxYear: parseInt(moment().format('YYYY'),10),
+        }, function(start, end, label) {
+        console.log('start:'+start+' end:'+end+' label:'+label);
+      });
+    });
+
     setTimeout(function() {
 
                 // [ Javascript source table ]

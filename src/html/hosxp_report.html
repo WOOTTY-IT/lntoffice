@@ -4,6 +4,7 @@
     @@include('./layouts/head.html')
     <!-- data tables css -->
     <link rel="stylesheet" href="assets/css/plugins/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/daterangepicker.css">
     @@include('./layouts/head-bottom-link.html')
 </head>
 @@include('./layouts/main.html')
@@ -37,6 +38,27 @@
                         <h5>Individual Column Searching (Text Inputs)</h5>
                     </div>
                     <div class="card-body">
+                        <form>
+                            <div class="row">
+                                <div class="col-sm-2">
+                                    <div class="form-group">
+                                        <label class="floating-label" for="Email">Start</label>
+                                        <input type="text" name="startdate" value="10/24/1984" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                    <div class="form-group">
+                                        <label class="floating-label" for="Text">End</label>
+                                        <input type="text" name="enddate" value="10/24/1984" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                    <div class="form-group">
+                                        <button type="button" class="btn  btn-primary">Primary</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
                         <div class="dt-responsive table-responsive">
                             <table id="dthosxp-report" class="table table-striped table-bordered nowrap">
                                 <thead>
@@ -316,6 +338,9 @@
 <!-- datatable Js -->
 <script src="assets/js/plugins/jquery.dataTables.min.js"></script>
 <script src="assets/js/plugins/dataTables.bootstrap4.min.js"></script>
+<!-- datepicker js -->
+<script src="assets/js/plugins/moment.min.js"></script>
+<script src="assets/js/plugins/daterangepicker.js"></script>
 <script src="assets/js/pages/hosxp-report-custom.js"></script>
 @@include('./layouts/footer-bottom-link.html')
 </body>
