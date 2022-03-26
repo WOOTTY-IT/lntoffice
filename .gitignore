@@ -44,11 +44,12 @@ src/assets/fonts
 src/assets/images
 src/assets/json
 src/assets/scss
-src/assets/includes/!*
-src/assets/includes/config.inc.php
-src/assets/includes/content.html
+!src/assets/includes/*
+# src/assets/includes/config.inc.php
+# src/assets/includes/content.html
 src/assets/js/*.js
 src/assets/js/pages/*
+!src/assets/js/pages/auth-*
 !src/assets/js/pages/hosxp-report-custom.js
 src/html/*
 !src/html/layouts

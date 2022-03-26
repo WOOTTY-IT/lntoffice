@@ -23,7 +23,7 @@ $(document).ready(function() {
 
     $('#btn-hosxp-report').click(function(){
         console.log('button clicked!');
-
+    });
 
     setTimeout(function() {
 
@@ -95,6 +95,4 @@ $(document).ready(function() {
         });
 
     }, 350);
-
-    });
 });

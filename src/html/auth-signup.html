@@ -15,28 +15,37 @@
 			<div class="row align-items-center text-center">
 				<div class="col-md-12">
 					<div class="card-body">
-						<form id="register-authen">
+						<form id="validation-form123">
 							<img src="assets/images/logo-dark.png" alt="" class="img-fluid mb-4">
-							<h4 class="mb-3 f-w-400">สมัครสมาชิก</h4>
-							<div class="form-group mb-3">
-								<label class="floating-label" for="CID">CID</label>
-								<input type="text" class="form-control" name="CID" id="CID" placeholder="" >
-							</div>
-							<div class="form-group mb-3">
-								<label class="floating-label" for="Username">Username</label>
-								<input type="text" class="form-control" name="Username" id="Username" placeholder="">
-							</div>
-							<div class="form-group mb-4">
-								<label class="floating-label" for="Password">Password</label>
-								<input type="password" class="form-control" name="Password" id="Password" placeholder="">
-							</div>
-							<!--< div class="custom-control custom-checkbox  text-left mb-4 mt-2">
-								<input type="checkbox" class="custom-control-input" id="customCheck1">
-								<label class="custom-control-label" for="customCheck1">Send me the <a href="#!"> Newsletter</a> weekly.</label>
-							</div> -->
-							<!-- <button class="btn btn-primary btn-block mb-4">ตกลง</button> -->
-							<button type="submit" class="btn  btn-primary">Submit</button>
-							<p class="mb-2">เป็นสมาชิกอยู่แล้ว? <a href="auth-signin.html" class="f-w-400">ล็อกอิน</a></p>
+							<h4 class="mb-3 f-w-400">ลงทะเบียน</h4>
+						    <div class="row">
+						        <div class="col-md-12">
+						            <div class="form-group">
+						                <label class="form-label floating-label">CID</label>
+						                <input type="text" class="form-control" name="validation-cid" id="cid">
+						            </div>
+						        </div>
+						        <div class="col-md-12">
+						            <div class="form-group">
+						                <label class="form-label floating-label">Username</label>
+						                <input type="text" class="form-control" name="validation-username" id="username">
+						            </div>
+						        </div>
+						        <div class="col-md-12">
+						            <div class="form-group">
+						                <label class="form-label floating-label">Password</label>
+						                <input type="password" class="form-control" name="validation-password" id="password">
+						            </div>
+						        </div>
+						        <div class="col-md-12">
+						            <div class="form-group">
+						                <label class="form-label floating-label">Confirm password</label>
+						                <input type="password" class="form-control" name="validation-password-confirmation" id="password-confirm">
+						            </div>
+						        </div>
+						    </div>
+						    <button type="submit" class="btn  btn-primary" name="btn-submit" id="btn-submit">ตกลง</button>
+						    <p class="mb-2">เป็นสมาชิกอยู่แล้ว? <a href="auth-signin.html" class="f-w-400">ล็อกอิน</a></p>
 						</form>
 					</div>
 				</div>
@@ -44,6 +53,7 @@
 		</div>
 	</div>
 </div>
+
 <!-- [ auth-signup ] end -->
 
 <!-- Required Js -->
@@ -51,6 +61,11 @@
 <script src="assets/js/plugins/bootstrap.min.js"></script>
 <script src="assets/js/ripple.js"></script>
 <script src="assets/js/pcoded.min.js"></script>
+
+<!-- jquery-validation Js -->
+<script src="assets/js/plugins/jquery.validate.min.js"></script>
+<!-- form-picker-custom Js -->
+<script src="assets/js/pages/auth-signup.js"></script>
 @@include('./layouts/footer-bottom-link.html')
 
 </body>
