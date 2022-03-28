@@ -20,7 +20,7 @@ if ( ! empty( $_POST ) ) {
     		$_SESSION['user_id'] = $user->cid;
     	}
 
-    }
+    }  
 }
 
     	// var_dump($_POST);

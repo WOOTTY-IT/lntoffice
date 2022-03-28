@@ -29,4 +29,4 @@ if(isset($_POST['btn-submit'])) {
 	//Closing the connection
 	$con->close();
 
-}
+}  
