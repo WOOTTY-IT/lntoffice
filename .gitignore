@@ -53,6 +53,7 @@ src/assets/js/pages/*
 !src/assets/js/pages/hosxp-report-custom.js
 src/html/*
 !src/html/layouts
+!src/html/index.php
 !src/html/hosxp_report.html
 !src/html/auth-*
 docs/
