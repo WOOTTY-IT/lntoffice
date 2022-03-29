@@ -1,11 +1,9 @@
 <?php
-// Always start this first
+
 session_start();
 
 if ( ! empty( $_POST ) ) {
-	print_r($_POST);
-    	echo ("username:" . $_POST['username'] );
-    	echo ("password:" . $_POST['password'] );
+    
     if ( isset( $_POST['username'] ) && isset( $_POST['password'] ) ) {
         // Getting submitted user data from database
         $conn = new mysqli($gaSql['server'], $gaSql['user'], $gaSql['password'], $gaSql['db']);
@@ -22,5 +20,3 @@ if ( ! empty( $_POST ) ) {
 
     }  
 }
-
-    	// var_dump($_POST);

@@ -13,20 +13,15 @@ $(document).ready(function() {
 
             submitHandler: function (form) {
                     console.log('submitHandler');
-                    
                 $.ajax({
                     url : form.action,
                     type: form.method,
-                    // data: $(from).serialize(),
-                    data: { username:"woodies", password: "pass1234" },
-                    success: function (response) {
-                            
-                        setTimeout(function () {
+                    data: $(from).serialize(),
+                    success: function (response) {                            
                             console.log(response);
-                        },2000);
                     }
                 });
-            },  
+            }, 
 
             // Errors //
 

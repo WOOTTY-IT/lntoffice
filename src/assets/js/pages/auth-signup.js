@@ -7,34 +7,34 @@ $(document).ready(function() {
     });*/
     $(function() {
         // [ Initialize validation ]
-        $('#validation-form123').validate({
+        $('#auth-signup-form').validate({
             ignore: '.ignore, .select2-input',
             focusInvalid: true,
             rules: {
-                'validation-cid': {
+                'cid': {
                     required: true,
                     minlength: 13,
                     maxlength: 13
                 },
-                'validation-username': {
+                'username': {
                     required: true
                 },
-                'validation-password': {
+                'password': {
                     required: true,
                     minlength: 6,
                     maxlength: 256,
-                    // equalTo : 'input[name="validation-password-confirmation"]'
+                    // equalTo : 'input[name="password-confirmation"]'
                 },
-                'validation-password-confirmation': {
+                'password-confirmation': {
                     required: true,
                     minlength: 6,
-                    equalTo: 'input[name="validation-password"]'
+                    equalTo: 'input[name="password"]'
                 },
             },
 
             submitHandler: function() { 
-                let $username = 'input[name="validation-username"]';
-                let $password = 'input[name="validation-password"]';
+                let $username = 'input[name="username"]';
+                let $password = 'input[name="password"]';
                 let $dataString = "username:" + $username + "&password:" + $password;
                 $.ajax({
                     type: "POST",

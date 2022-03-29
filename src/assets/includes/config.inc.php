@@ -1,5 +1,5 @@
 <?php 
 $gaSql['server'] = 'localhost';
-$gaSql['user'] = 'root';
+$gaSql['username'] = 'root';
 $gaSql['password'] = '123456789';
-$gaSql['db'] = 'office_pts';
+$gaSql['database'] = 'office_pts';
