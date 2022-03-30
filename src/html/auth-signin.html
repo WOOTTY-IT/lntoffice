@@ -15,7 +15,7 @@
 			<div class="row align-items-center text-center">
 				<div class="col-md-12">
 					<div class="card-body">
-						<form id="auth-signin" method="POST" action="./assets/includes/auth-signin.php">
+						<form id="auth-signin-form"> 
 							<img src="assets/images/logo-dark.png" alt="" class="img-fluid mb-4">
 							<h4 class="mb-3 f-w-400">ล็อกอิน</h4>
 							<div class="form-group mb-3">
@@ -26,7 +26,7 @@
 								<label class="floating-label" for="password">Password</label>
 								<input type="password" class="form-control" name="password" id="password">
 							</div>
-							<button type="submit" class="btn btn-block btn-primary mb-4" id="btn-signin">ตกลง</button>
+							<button  class="btn btn-block btn-primary mb-4" id="btn-signin">ตกลง</button>
 							<p class="mb-2 text-muted">ลืมรหัสผ่าน? <a href="auth-reset-password.html" class="f-w-400">รีเซ็ต</a></p>
 							<p class="mb-0 text-muted">ยังไม่เป็นสมาชิก? <a href="auth-signup.html" class="f-w-400">ลงทะเบียน</a></p>
 						</form>
@@ -43,6 +43,10 @@
 <script src="assets/js/plugins/bootstrap.min.js"></script>
 <script src="assets/js/ripple.js"></script>
 <script src="assets/js/pcoded.min.js"></script>
+<!-- jquery-validation Js -->
+<script src="assets/js/plugins/jquery.validate.min.js"></script>
+<!-- form-picker-custom Js -->
+<script src="assets/js/pages/auth-signin.js"></script>
 @@include('./layouts/footer-bottom-link.html')
 
 </body>
