@@ -44,21 +44,29 @@ $(document).ready(function () {
 
             jqXHR.then(function( data, textStatus, jqXHR ) {}, function( jqXHR, textStatus, errorThrown ) {});
             Incorporates the functionality of the .done() and .fail() methods, allowing (as of jQuery 1.8) the underlying Promise to be manipulated. Refer to deferred.then() for implementation details.*/
-            console.log('send:ajax submit');
+
+            // console.log('form submitHandler');
             $.ajax({
                 url : "./assets/includes/auth-signin.php",
                 type: "POST",
                 data: $(form).serialize(),
+                beforeSend: function ( jqXHR , PlainObject ) {
+                    // console.log('ajax beforeSend: sending..');
+                    // console.log(PlainObject.data);
+                },
                 success: function(data, textStatus, jqXHR) {
-                        console.log('success->callback: ' + jqXHR.status + ':' + textStatus);
-                        window.location.href = ' bc_card.html';
+                        console.log('ajax success: ' + jqXHR.status + '/' + jqXHR.responseText);
+                        if (jqXHR.status == 200) {
+                            console.log( jqXHR.responseText );
+                            // window.location.href = jqXHR.responseText;
+                        }
                 },
                 error: function (jqXHR, textStatus, errorThrown) {
-                    console.log('error->callback: ' + jqXHR.status + ':' + textStatus);
+                    // console.log('ajax error: ' + jqXHR.status + '/' + textStatus);
                 },
-                complete: function (jqXHR, textStatus) {
-                    console.log('complete->callback: ' + jqXHR.status + ':' + textStatus);
-                }
+                /*complete: function (jqXHR, textStatus) {
+                    console.log('ajax complete: ' + jqXHR.status + '/' + textStatus);
+                }*/
             });
             return false;
         },
