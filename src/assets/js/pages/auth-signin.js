@@ -50,23 +50,21 @@ $(document).ready(function () {
                 url : "./assets/includes/auth-signin.php",
                 type: "POST",
                 data: $(form).serialize(),
+                dataType: 'json',
                 beforeSend: function ( jqXHR , PlainObject ) {
                     // console.log('ajax beforeSend: sending..');
                     // console.log(PlainObject.data);
                 },
                 success: function(data, textStatus, jqXHR) {
-                        console.log('ajax success: ' + jqXHR.status + '/' + jqXHR.responseText);
-                        if (jqXHR.status == 200) {
-                            console.log( jqXHR.responseText );
-                            // window.location.href = jqXHR.responseText;
-                        }
+                    // var obj = jQuery.parseJSON( data );
+                    console.log('ajax success: ' , data );
                 },
                 error: function (jqXHR, textStatus, errorThrown) {
-                    // console.log('ajax error: ' + jqXHR.status + '/' + textStatus);
+                    console.log('ajax error: ' + textStatus);
                 },
-                /*complete: function (jqXHR, textStatus) {
-                    console.log('ajax complete: ' + jqXHR.status + '/' + textStatus);
-                }*/
+                complete: function (jqXHR, textStatus) {
+                    console.log('ajax complete: ' + textStatus);
+                }
             });
             return false;
         },
