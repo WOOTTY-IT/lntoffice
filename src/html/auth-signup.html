@@ -40,11 +40,11 @@
 						        <div class="col-md-12">
 						            <div class="form-group">
 						                <label class="form-label floating-label">Confirm password</label>
-						                <input type="password" class="form-control" name="password-confirmation" id="password-confirm">
+						                <input type="password" class="form-control" name="password-confirm" id="password-confirm">
 						            </div>
 						        </div>
 						    </div>
-						    <button type="submit" class="btn  btn-primary" name="btn-submit" id="btn-submit">ตกลง</button>
+							<button  class="btn btn-block btn-primary mb-4" id="btn-signup">ตกลง</button>
 						    <p class="mb-2">เป็นสมาชิกอยู่แล้ว? <a href="auth-signin.html" class="f-w-400">ล็อกอิน</a></p>
 						</form>
 					</div>
@@ -55,6 +55,24 @@
 </div>
 
 <!-- [ auth-signup ] end -->
+<!-- [ vertically-modal ] start -->
+	<div id="ModalAuth-Signup" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="ModalAuth-SignupTitle" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="ModalAuth-SignupTitle">ลงทะเบียน</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="ตกลง"><span aria-hidden="true">&times;</span></button>
+				</div>
+				<div class="modal-body text-center">
+					<p class="mb-0"><h5>modal body error</h5></p>
+				</div>
+				<div class="modal-footer justify-content-center">
+					<button type="button" class="btn  btn-primary" data-dismiss="modal">ตกลง</button>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- [ vertically-modal ] end -->
 
 <!-- Required Js -->
 <script src="assets/js/vendor-all.min.js"></script>

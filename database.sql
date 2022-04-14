@@ -519,7 +519,7 @@ INSERT INTO `position` VALUES ('39', 'นักประชาสัมพัน
 DROP TABLE IF EXISTS `sex`;
 CREATE TABLE `sex` (
   `sex_id` int(25) NOT NULL,
-  `sex_name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `sex_name` varchar(256) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`sex_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -535,10 +535,10 @@ INSERT INTO `sex` VALUES ('2', 'หญิง');
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `cid` varchar(13) COLLATE utf8_unicode_ci NOT NULL,
-  `full_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `username` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `password` varchar(33) COLLATE utf8_unicode_ci NOT NULL,
-  `user_type` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `full_name` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
+  `username` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
+  `password` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
+  `account_type` varchar(32) COLLATE utf8_unicode_ci NOT NULL,
   `update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`cid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -546,9 +546,4 @@ CREATE TABLE `users` (
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `users`(`cid`,`full_name`,`username`,`password`,`user_type`) VALUES ('3320200524765', 'pwan', 'ppp', 'ppp', 'admin');
-INSERT INTO `users`(`cid`,`full_name`,`username`,`password`,`user_type`) VALUES ('3320200524766', 'ประเสริฐ ดีเสมอ', 'p', 'p', 'admin');
-INSERT INTO `users`(`cid`,`full_name`,`username`,`password`,`user_type`) VALUES ('3320200524799', 'pwan jai', 'jai', 'jai', 'admin');
-INSERT INTO `users`(`cid`,`full_name`,`username`,`password`,`user_type`) VALUES ('3333333333333', 'p3333', 'p3', 'p3', 'admin');
-INSERT INTO `users`(`cid`,`full_name`,`username`,`password`,`user_type`) VALUES ('3361200362987', 'พรมมา หงษ์แปลง', 'bhomma', '1234', 'admin');
-
+INSERT INTO `users`(`cid`,`full_name`,`username`,`password`,`account_type`) VALUES ('1234567890123', 'mr.john  doe', 'user', '$2a$12$3sYfXeivApdeDZn6steyoemc6/5PJE/Ml1sZW9KL5Aq4A9uUaE91C', 'admin');

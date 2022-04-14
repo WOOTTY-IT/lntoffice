@@ -1,6 +1,8 @@
 <?php
 
+if (!isset($db)) {
   $db = new mysqli($gaSql['server'], $gaSql['username'],$gaSql['password'],$gaSql['database']); 
+}
 
 /* check connection */
 if ($db->connect_errno) {  

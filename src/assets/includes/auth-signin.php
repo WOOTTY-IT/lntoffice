@@ -1,17 +1,9 @@
 <?php
-
-require('config.inc.php');
-require('condb.php');
-
-// Initialize the session
+require_once('config.inc.php');
+require_once('condb.php');
 session_start();
- 
-
-/*$_POST['username'] = "p3";
-$_POST['password'] = "p3";*/
-
 // Processing form data when form is submitted
-if($_SERVER["REQUEST_METHOD"] == "POST"){
+if(strtoupper($_SERVER["REQUEST_METHOD"]) == "POST"){
     // Validate credentials
     if ( isset( $_POST['username'] ) && isset( $_POST['password'] ) ) {
         // Prepare a select statement
@@ -21,9 +13,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $stmt->execute();
         $result = $stmt->get_result();
         $user = $result->fetch_object();
-        // Verify user password and set $_SESSION
-        if ( password_verify( $_POST['password'], $user->password ) ) {
-            $_SESSION = (array) $user + array('isLogin' => true, 'sid' => session_id());
+        // Verify user password
+        if (password_verify($_POST['password'], $user->password)) {
+            $_SESSION = (array) $user + array('isLogin' => true, 'sid' => session_id(), 'redirect_path' => 'index.html');
              print_r(json_encode($_SESSION));
         }else{
             $_SESSION = array('isLogin' => false, 'sid' => null);

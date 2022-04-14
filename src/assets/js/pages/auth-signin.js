@@ -51,22 +51,32 @@ $(document).ready(function () {
                 type: "POST",
                 data: $(form).serialize(),
                 dataType: 'json',
-                beforeSend: function ( jqXHR , PlainObject ) {
+                beforeSend: function ( request , PlainObject ) {
                     // console.log('ajax beforeSend: sending..');
-                    // console.log(PlainObject.data);
+                    console.log(PlainObject.data);
                 },
-                success: function(data, textStatus, jqXHR) {
-                    // var obj = jQuery.parseJSON( data );
-                    console.log('ajax success: ' , data );
+                success: function(response, textStatus, jqXHR) {
+                    // var obj = jQuery.parseJSON( response );
+                    console.log('ajax success: ' , response );
+                    if (response.isLogin) {
+                        /*$('#ModalAuth-Signin').find('.modal-body h5').text('ล็อกอินสำเร็จ');
+                        $('#ModalAuth-Signin').modal({backdrop:false, keyboard:true});
+                        $('#ModalAuth-Signin').on('hidden.bs.modal', function (event) {
+                            window.location.href = response.redirect_path;
+                        });*/
+                            window.location.href = response.redirect_path;
+                    }else{
+                        $('#ModalAuth-Signin').find('.modal-body h5').text('ยูเซอร์เนมหรือรหัสผ่านไม่ถูกต้อง');
+                        $('#ModalAuth-Signin').modal({backdrop:false, keyboard:true});
+                    }
                 },
                 error: function (jqXHR, textStatus, errorThrown) {
-                    console.log('ajax error: ' + textStatus);
+                    console.log('ajax error: ' + errorThrown);
                 },
                 complete: function (jqXHR, textStatus) {
-                    console.log('ajax complete: ' + textStatus);
+                    console.log('ajax complete: ' + jqXHR);
                 }
             });
-            return false;
         },
 
         // Errors //
