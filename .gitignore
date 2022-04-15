@@ -45,17 +45,19 @@ src/assets/images
 src/assets/json
 src/assets/scss
 !src/assets/includes/*
-# src/assets/includes/config.inc.php
-# src/assets/includes/content.html
 src/assets/js/*.js
 src/assets/js/pages/*
 !src/assets/js/pages/auth-*
 !src/assets/js/pages/hosxp-report-custom.js
 src/html/*
 !src/html/layouts
-!src/html/index.php
+!src/html/*.php
 !src/html/hosxp_report.html
-!src/html/auth-*
+!src/html/auth-change-password.html
+!src/html/auth-profile-settings.html
+!src/html/auth-reset-password.html
+!src/html/auth-signin.html
+!src/html/auth-signup.html
 docs/
 # TypeScript v1 declaration files
 typings/

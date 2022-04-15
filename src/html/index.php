@@ -3,7 +3,9 @@
 session_start();
 
 if ( isset($_SESSION['sid']) && ($_SESSION['sid'] != '') ) {   
-    header('location: ./index.html');
+    // redirect to welcome page
+    header('location: ./user-profile.html');
 }else{
+    // redirect to login page
     header('location: ./auth-signin.html');
 }

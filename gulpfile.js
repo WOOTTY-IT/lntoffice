@@ -158,6 +158,12 @@ gulp.task('build', function() {
 
 //  [ Copy assets ] end
 
+// [ Copy src/html/*.php to /dist folder]
+gulp.task('copy-php', function () {
+    return gulp.src('src/html/*.php')
+        .pipe(gulp.dest('dist'))
+})
+
 //  [ build html ] start
 gulp.task('build-html', function() {
     return gulp.src('src/html/*.html')
