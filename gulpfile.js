@@ -166,7 +166,18 @@ gulp.task('copy-php', function () {
 
 //  [ build html ] start
 gulp.task('build-html', function() {
-    return gulp.src('src/html/*.html')
+    var html = [
+    'src/html/index.html',
+    'src/html/auth-change-password.html',
+    'src/html/auth-profile-settings.html',
+    'src/html/auth-reset-password.html',
+    'src/html/auth-signin.html',
+    'src/html/auth-signup.html',
+    'src/html/hosxp-report.html'
+    ]
+
+    // return gulp.src('src/html/*.html')
+    return gulp.src(html)
         .pipe(fileinclude({
             context: layout,
             prefix: '@@',

@@ -52,7 +52,7 @@ src/assets/js/pages/*
 src/html/*
 !src/html/layouts
 !src/html/*.php
-!src/html/hosxp_report.html
+!src/html/hosxp-report.html
 !src/html/auth-change-password.html
 !src/html/auth-profile-settings.html
 !src/html/auth-reset-password.html
