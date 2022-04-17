@@ -1,7 +1,7 @@
 {
-  "name": "lntoffice",
-  "version": "1.0.0",
-  "description": "Nextro is a admin template made using Bootstrap 4 framework.",
+  "name": "hoso",
+  "version": "1.1.0",
+  "description": "hospital office",
   "main": "index.js",
   "scripts": {
     "start": "node app.js",

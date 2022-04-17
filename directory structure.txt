@@ -1,0 +1,34 @@
+Directory structure
+
+src/
+    ├── assets/
+    │   ├── fonts/
+    │   ├── images/
+    │   ├── js/
+    │   ├── json/
+    │   ├── scss/
+    ├── html/
+    │   ├── layouts/
+    ├── php/
+    │   ├── classes/
+    ├── .babelrc
+    ├── gulpfile.js
+    ├── package.json
+    ├── package-lock.json
+	├── README.MD
+
+dis/
+    ├── assets/
+    │   ├── css/
+    │   ├── fonts/
+    │   ├── images/
+    │   ├── js/
+    │   ├── json/
+    ├── php/
+    │   ├── classes/
+    │   ├── includes/
+    │   ├── index.php
+    │   ├── auth-signin.php
+    │   ├── auth-signup.php
+    │   ├── auth-signout.php
+    ├── index.html

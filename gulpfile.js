@@ -158,15 +158,15 @@ gulp.task('build', function() {
 
 //  [ Copy assets ] end
 
-// [ Copy src/html/*.php to /dist folder]
+// [ Copy .php file to /dist/php folder]
 gulp.task('copy-php', function () {
-    return gulp.src('src/html/*.php')
-        .pipe(gulp.dest('dist'))
+    return gulp.src('src/php/**/*.php')
+        .pipe(gulp.dest('dist/php'))
 })
 
 //  [ build html ] start
 gulp.task('build-html', function() {
-    var html = [
+/*    var html = [
     'src/html/index.html',
     'src/html/auth-change-password.html',
     'src/html/auth-profile-settings.html',
@@ -174,10 +174,10 @@ gulp.task('build-html', function() {
     'src/html/auth-signin.html',
     'src/html/auth-signup.html',
     'src/html/hosxp-report.html'
-    ]
+    ]*/
 
-    // return gulp.src('src/html/*.html')
-    return gulp.src(html)
+    // return gulp.src(html)
+    return gulp.src('src/html/*.html')
         .pipe(fileinclude({
             context: layout,
             prefix: '@@',
@@ -266,6 +266,7 @@ gulp.task('watch', function() {
     gulp.watch('src/assets/js/**/*.js', gulp.series('build-js')).on('change', browsersync.reload);
     gulp.watch('src/html/**/*.html', gulp.series('build-html')).on('change', browsersync.reload);
     gulp.watch('src/doc/**/*.html', gulp.series('build')).on('change', browsersync.reload);
+    gulp.watch('src/php/**/*.php', gulp.series('copy-php')).on('change', browsersync.reload);
 })
 //  [ watch ] start
 const compile = gulp.parallel('browserSync', 'watch');
@@ -278,6 +279,7 @@ gulp.task('default',
         'build-js',
         'build-html',
         'imgmin',
+        'copy-php',
         compile
     )
 );

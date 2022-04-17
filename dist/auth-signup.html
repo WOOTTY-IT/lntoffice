@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>   
+
+	<title>hoso</title>
+	<!-- HTML5 Shim and Respond.js IE11 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 11]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="">
+	<meta name="author" content="Phoenixcoded" />
+	<!-- Favicon icon -->
+	<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+	<!-- vendor css -->
+	<link rel="stylesheet" href="assets/css/style.css">
+	
+	
+
+
+</head>
+
+<!-- [ auth-signup ] start -->
+<div class="auth-wrapper">
+	<div class="auth-content">
+		<div class="card">
+			<div class="row align-items-center text-center">
+				<div class="col-md-12">
+					<div class="card-body">
+						<form id="auth-signup-form">
+							<img src="assets/images/logo-dark.png" alt="" class="img-fluid mb-4">
+							<h4 class="mb-3 f-w-400">ลงทะเบียน</h4>
+						    <div class="row">
+						        <div class="col-md-12">
+						            <div class="form-group">
+						                <label class="form-label floating-label">CID</label>
+						                <input type="text" class="form-control" name="cid" id="cid">
+						            </div>
+						        </div>
+						        <div class="col-md-12">
+						            <div class="form-group">
+						                <label class="form-label floating-label">Username</label>
+						                <input type="text" class="form-control" name="username" id="username">
+						            </div>
+						        </div>
+						        <div class="col-md-12">
+						            <div class="form-group">
+						                <label class="form-label floating-label">Password</label>
+						                <input type="password" class="form-control" name="password" id="password">
+						            </div>
+						        </div>
+						        <div class="col-md-12">
+						            <div class="form-group">
+						                <label class="form-label floating-label">Confirm password</label>
+						                <input type="password" class="form-control" name="password-confirm" id="password-confirm">
+						            </div>
+						        </div>
+						    </div>
+							<button  class="btn btn-block btn-primary mb-4" id="btn-signup">ตกลง</button>
+						    <p class="mb-2">เป็นสมาชิกอยู่แล้ว? <a href="auth-signin.html" class="f-w-400">ล็อกอิน</a></p>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- [ auth-signup ] end -->
+<!-- [ vertically-modal ] start -->
+	<div id="ModalAuth-Signup" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="ModalAuth-SignupTitle" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="ModalAuth-SignupTitle">ลงทะเบียน</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="ตกลง"><span aria-hidden="true">&times;</span></button>
+				</div>
+				<div class="modal-body text-center">
+					<p class="mb-0"><h5>modal body error</h5></p>
+				</div>
+				<div class="modal-footer justify-content-center">
+					<button type="button" class="btn  btn-primary" data-dismiss="modal">ตกลง</button>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- [ vertically-modal ] end -->
+
+<!-- Required Js -->
+<script src="assets/js/vendor-all.min.js"></script>
+<script src="assets/js/plugins/bootstrap.min.js"></script>
+<script src="assets/js/ripple.js"></script>
+<script src="assets/js/pcoded.min.js"></script>
+
+<!-- jquery-validation Js -->
+<script src="assets/js/plugins/jquery.validate.min.js"></script>
+<!-- form-picker-custom Js -->
+<script src="assets/js/pages/auth-signup.js"></script>
+
+
+
+</body>
+
+</html>
